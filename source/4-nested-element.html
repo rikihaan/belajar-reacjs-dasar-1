@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Element</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>m
+    <div id="root"></div>
+
+    <script>
+        const root = document.getElementById("root");
+
+        const element = React.createElement('ul',{
+
+        },
+
+        //parameter ke-3 dan seterusnya dari React.createElemt akan selalu di anggap children
+
+        React.createElement('li',{className:'list-1'}, "Aple"),
+        React.createElement('li',{className:'list-2'}, "Orange"),
+        React.createElement('li',{className:'list-3'}, "Monggo"),
+        
+        )
+
+        ReactDOM.render(element,root)
+    </script>
+</body>
+</html>

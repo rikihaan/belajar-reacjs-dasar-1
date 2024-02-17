@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>createElement Children Array</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+
+        const root = document.getElementById("root");
+        const p1 = React.createElement("p",{
+            children:"paragraph 1"
+        })
+        const p2 = React.createElement("p",{
+            children:"paragraph 2"
+        })
+
+        const p3 = React.createElement("p",{
+            children:"paragraph 3"
+        })
+
+
+
+        const element = React.createElement('div',{
+            children:[p1,p2,p3],
+            className :"Heading-1"
+        });
+        
+        /**
+         * Return dari element (createElement adalah object
+         * kemudian di render / di terjemaahkan ke browser oleh reatDOM**/
+
+        ReactDOM.render(element,root)
+        
+    </script>
+</body>
+</html>
